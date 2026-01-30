@@ -1,0 +1,78 @@
+/* Poker Table Background */
+body {
+    background: radial-gradient(circle, #2e7d32 0%, #1b5e20 100%);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-family: 'Georgia', serif;
+}
+
+/* Requirement 2, 5, 8, 9, 10, 11 */
+#playing-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    padding: 40px;
+}
+
+/* Requirement 3, 4, 6, 12, 13 + Animation */
+.card {
+    background-color: #f5f5f5;
+    width: 150px;
+    height: 220px;
+    border-radius: 12px;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+
+/* Animated Hover Effect */
+.card:hover {
+    transform: translateY(-15px) rotate(2deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Requirement 7, 14 */
+.left {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+}
+
+/* Requirement 8, 10, 15, 17, 18 */
+.middle {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 3rem;
+}
+
+/* Requirement 9, 16 */
+.right {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    transform: rotate(180deg);
+    /* Upside down like a real card */
+}
+
+/* Coloring for Hearts/Diamonds */
+.red {
+    color: #d32f2f;
+}
+
+span {
+    font-size: 1.2rem;
+}

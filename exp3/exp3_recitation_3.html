@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeonScript Documentation</title>
+    <link rel="stylesheet" href="exp3_recitation_3.css">
+</head>
+
+<body>
+
+    <nav id="navbar">
+        <header>NeonScript Docs</header>
+        <a class="nav-link" href="#Introduction">Introduction</a>
+        <a class="nav-link" href="#Getting_Started">Getting Started</a>
+        <a class="nav-link" href="#Variable_Declaration">Variable Declaration</a>
+        <a class="nav-link" href="#Function_Syntax">Function Syntax</a>
+        <a class="nav-link" href="#Async_Operations">Async Operations</a>
+    </nav>
+
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <p>NeonScript is a lightweight, high-performance wrapper designed for modern web applications. It simplifies
+                DOM manipulation while maintaining a tiny footprint.</p>
+            <p>The core philosophy is based on three pillars:</p>
+            <ul>
+                <li>Speed</li>
+                <li>Clarity</li>
+                <li>Extensibility</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="Getting_Started">
+            <header>Getting Started</header>
+            <p>To begin using NeonScript, you can include the CDN link in your HTML header. Ensure you are using the
+                latest stable version.</p>
+            <code>npm install neonscript-core</code>
+            <p>Once installed, initialize the library in your entry point file to gain access to the global object.</p>
+        </section>
+
+        <section class="main-section" id="Variable_Declaration">
+            <header>Variable Declaration</header>
+            <p>NeonScript uses a strict scoping system. You should define your variables using the specific keywords
+                provided by the engine.</p>
+            <code>neon let user = "Admin";</code>
+            <p>This ensures that variables are tracked efficiently by the garbage collector.</p>
+            <ul>
+                <li>Immutable constants</li>
+                <li>Reactive signals</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="Function_Syntax">
+            <header>Function Syntax</header>
+            <p>Functions in NeonScript are first-class citizens. They can be passed as arguments and returned from other
+                functions.</p>
+            <code>fn calculate(x, y) { return x + y; }</code>
+            <p>You can also use arrow-shorthand for anonymous callbacks within your logic.</p>
+        </section>
+
+        <section class="main-section" id="Async_Operations">
+            <header>Async Operations</header>
+            <p>Handling data fetching is streamlined through the internal promise engine. Use the keyword
+                <code>awaiting</code> to pause execution.
+            </p>
+            <code>val data = awaiting fetchSource(url);</code>
+            <p>Error handling is managed through a global observer pattern, reducing the need for repetitive try-catch
+                blocks.</p>
+            <ul>
+                <li>Automatic retries</li>
+                <li>Timeout management</li>
+            </ul>
+        </section>
+    </main>
+
+</body>
+
+</html>

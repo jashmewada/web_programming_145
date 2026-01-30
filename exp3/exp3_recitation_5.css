@@ -1,0 +1,212 @@
+/* Color Palette */
+:root {
+    --nv-green: #76b900;
+    --dark-bg: #050505;
+    --card-bg: #1a1a1a;
+    --cyber-pink: #ff003c;
+    --note-yellow: #fdfd96;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    /* Cyberpunk aesthetic */
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Header & Nav (Flexbox Requirement) */
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background: rgba(0, 0, 0, 0.9);
+    border-bottom: 3px solid var(--nv-green);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    z-index: 1000;
+}
+
+#header-img {
+    height: 30px;
+}
+
+.model-name {
+    color: var(--nv-green);
+    font-weight: bold;
+    margin-left: 10px;
+    font-size: 1.2rem;
+}
+
+#nav-bar ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--nv-green);
+    text-shadow: 0 0 8px var(--nv-green);
+}
+
+/* Hero Section */
+#hero {
+    padding: 150px 20px 80px;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2000');
+    background-size: cover;
+}
+
+.glitch-text {
+    font-size: 3rem;
+    color: var(--nv-green);
+    margin-bottom: 20px;
+}
+
+#form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#email {
+    padding: 12px;
+    width: 320px;
+    border: 2px solid var(--nv-green);
+    background: #000;
+    color: var(--nv-green);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#submit {
+    padding: 12px 40px;
+    background: var(--nv-green);
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+    transition: transform 0.2s;
+}
+
+#submit:hover {
+    transform: scale(1.05);
+}
+
+/* Specs & Sticky Notes */
+#specs-section {
+    padding: 80px 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#main-product-img {
+    max-width: 500px;
+    width: 100%;
+    filter: drop-shadow(0 0 25px var(--nv-green));
+    margin-bottom: 60px;
+}
+
+.specs-board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.sticky-note {
+    background: var(--note-yellow);
+    color: #111;
+    width: 220px;
+    height: 220px;
+    padding: 25px;
+    position: relative;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.6);
+    transform: rotate(-2deg);
+    transition: 0.3s cubic-bezier(.17, .67, .83, .67);
+}
+
+.sticky-note:nth-child(even) {
+    transform: rotate(3deg);
+    background: #dfff00;
+}
+
+.sticky-note:hover {
+    transform: scale(1.1) rotate(0deg);
+    z-index: 10;
+}
+
+.pin {
+    position: absolute;
+    top: -10px;
+    left: 48%;
+    width: 15px;
+    height: 15px;
+    background: var(--cyber-pink);
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.sticky-note h3 {
+    border-bottom: 2px solid #333;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* Video Container */
+.video-container {
+    max-width: 900px;
+    margin: 50px auto;
+    border: 2px solid var(--nv-green);
+}
+
+/* Media Query (Mobile Responsiveness) */
+@media (max-width: 768px) {
+    #header {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+    }
+
+    #nav-bar ul {
+        margin-top: 15px;
+    }
+
+    .glitch-text {
+        font-size: 1.8rem;
+    }
+
+    .sticky-note {
+        width: 90%;
+        height: auto;
+        transform: rotate(0) !important;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    background: #000;
+    color: #555;
+    font-size: 0.8rem;
+}

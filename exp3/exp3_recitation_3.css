@@ -1,0 +1,100 @@
+:root {
+    --bg-color: #0d1117;
+    --nav-bg: #161b22;
+    --accent: #58a6ff;
+    --text-color: #c9d1d9;
+    --code-bg: #21262d;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+}
+
+/* Navbar Sidebar (Requirement 14 & 21) */
+#navbar {
+    position: fixed;
+    min-width: 250px;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    border-right: 2px solid var(--accent);
+    background-color: var(--nav-bg);
+}
+
+#navbar header {
+    color: var(--accent);
+    margin: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 20px 0;
+}
+
+.nav-link {
+    display: block;
+    padding: 15px;
+    color: var(--text-color);
+    text-decoration: none;
+    border-top: 1px solid #30363d;
+    transition: background 0.3s;
+}
+
+.nav-link:hover {
+    background-color: var(--code-bg);
+    color: var(--accent);
+}
+
+/* Main Content Area */
+#main-doc {
+    margin-left: 270px;
+    padding: 20px;
+    max-width: 800px;
+}
+
+.main-section {
+    margin-bottom: 40px;
+}
+
+header {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+code {
+    display: block;
+    background-color: var(--code-bg);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    color: #ff7b72;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+ul {
+    margin-top: 10px;
+}
+
+/* Media Query (Requirement 15 & 22) */
+@media (max-width: 768px) {
+    #navbar {
+        width: 100%;
+        height: 200px;
+        position: relative;
+        border-right: none;
+        border-bottom: 2px solid var(--accent);
+    }
+
+    #main-doc {
+        margin-left: 0;
+    }
+
+    #navbar {
+        overflow-y: auto;
+    }
+}
